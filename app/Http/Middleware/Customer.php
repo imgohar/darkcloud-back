@@ -21,10 +21,6 @@ class Customer
             return redirect()->route('login');
         }
 
-        if (Auth::user()->role == 'admin') {
-            return redirect()->route('admin');
-        }
-
         // if (Auth::user()->role == 'seller') {
         //     return redirect()->route('seller');
         // }

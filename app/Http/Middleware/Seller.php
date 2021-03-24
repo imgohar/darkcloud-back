@@ -22,9 +22,6 @@ class Seller
         if (Auth::user()->role == 'customer') {
             return redirect()->route('customer');  
         }
-        if (Auth::user()->role == 'admin') {
-            return redirect()->route('admin');
-        }
         if (Auth::user()->role == 'seller') {
             return $next($request);
         }

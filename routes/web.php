@@ -17,7 +17,6 @@ use App\Http\Controllers\PagesController;
 
 Route::get('/', 'PagesController@index')->middleware('customer');
 Route::post('/pin',[PagesController::class,'index2'])->name('pin');
-Route::post('/pin2',[AdminController::class,'index2'])->name('pin2');
 
 // Demo routes
 Route::middleware(['phone_verify'])->group(function(){
@@ -53,19 +52,7 @@ Route::middleware(['phone_verify'])->group(function(){
     Route::get("/change-profile",[PagesController::class,'changeProfile']);
     Route::post("/change-profile",[PagesController::class,'changeProfileSubmit']);
 
-    // ADMIN ROUTES
-
-    Route::get('/admin', [AdminController::class,'index'])->name('admin');
-    
-    Route::get("/admin/change-profile",[AdminController::class,'changeProfile']);
-    Route::post("/admin/change-profile",[AdminController::class,'changeProfileSubmit']);
-
-    Route::get('/admin/enable-2fa',[AdminController::class,'enable2Fa']);
-    Route::post('/admin/enable-2fa',[AdminController::class,'enable2FaSubmit']);
-
-    Route::get("/admin/password-reset",[AdminController::class,'passwordRreset']);
-    Route::post("/admin/password-reset",[AdminController::class,'passwordRresetSubmit']);
-    
+     
 });
 
 Auth::routes(['verify' => true]);

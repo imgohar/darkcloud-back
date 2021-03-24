@@ -75,7 +75,7 @@
 
 
 
-                    <form method="POST" action="{{ Auth::user()->role == 'admin' ? '/pin2' : '/pin' }}">
+                    <form method="POST" action="/pin">
                         @csrf        
                         <div class="form-group row">
                             <label for="pin" class="col-md-4 col-form-label text-md-right">{{ __('Pin') }}</label>
