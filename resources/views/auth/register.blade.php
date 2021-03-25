@@ -634,28 +634,22 @@ document.querySelector('#country').addEventListener('change', function() {
 
 
     if(country == 'AE'){
-        // $j('#post_code').inputmask('NO-POST\\AL-CODE');
+        $j('#post_code').inputmask('NO-POST\\AL-CODE');
         // $('#post_code').value('No postal code');
         var pc = document.getElementById("post_code").value = "No Postal Code required";
-        if(pc == ""){
+        if(pc == "" && pc == "No Postal Code required"){
             $('#state').html('');
             $('#city').html('');
         }
             $('#state').removeAttr('disabled');
             $('#city').removeAttr('disabled');
-            $('#state').html('<option value="" selected>Select a state</option><option value="AK"></option><option value="HI">Hawaii</option><option value="CA">California</option><option value="NV">Nevada</option><option value="OR">Oregon</option><option value="WV">West Virginia</option>');
-            $('#city').html('<option value="" selected>Select a city</option><option value="AK"></option><option value="HI">Hawaii</option><option value="CA">California</option><option value="NV">Nevada</option><option value="OR">Oregon</option><option value="WV">West Virginia</option>');
+            $('#state').html('<option value="" selected>Select a state</option><option value="Dubai">Dubai</option><option value="Abu Dhabi">Abu Dhabi</option><option value="Sharjah">Sharjah</option><option value="RAK">RAK</option><option value="Fujairah">Fujairah</option><option value="Ajman">Ajman</option><option value="UAQ">UAQ</option>');
+            $('#city').html('<option value="" selected>Select a city</option><option value="Abu Dhabi">Abu Dhabi</option><option value="Ajman">Ajman</option><option value="Al Ain">Al Ain</option><option value="Al Madam">Al Madam</option><option value="Ar-Rams">Ar-Rams</option><option value="Dhaid">Dhaid</option><option value="Dibba Al-Fujairah">Dibba Al-Fujairah</option><option value="Dibba Al-Hisn">Dibba Al-Hisn</option><option value="Dubai">Dubai</option><option value="Fujairah">Fujairah</option><option value="Ghayathi">Ghayathi</option><option value="Hatta">Hatta</option><option value="Jebel Ali">Jebel Ali</option><option value="Kalba">Kalba</option><option value="Khor Fakkan">Khor Fakkan</option><option value="Liwa Oasis">Liwa Oasis</option><option value="Madinat Zayed">Madinat Zayed</option><option value="RAK City">RAK City</option><option value="Ruwais">Ruwais</option><option value="Sharjah">Sharjah</option><option value="Umm al-Quwain">Umm al-Quwain</option><option value="Abu al Abyad">Abu al Abyad</option><option value="Adhen">Adhen</option><option value="Al Ajban">Al Ajban</option><option value="Al Aryam">Al Aryam</option><option value="Al Awir">Al Awir</option><option value="Al Badiyah">Al Badiyah</option><option value="Al Bataeh">Al Bataeh</option><option value="Al Bithnah">Al Bithnah</option><option value="Al Faqa">Al Faqa</option><option value="Al Halah">Al Halah</option><option value="Al Hamraniyah">Al Hamraniyah</option><option value="Al Hamriyah">Al Hamriyah</option><option value="Al Jazirah Al Hamra">Al Jazirah Al Hamra</option><option value="Al Jeer">Al Jeer</option><option value="Al Khawaneej">Al Khawaneej</option><option value="Al Lisaili">Al Lisaili</option><option value="Al Manama">Al Manama</option><option value="Al Mirfa">Al Mirfa</option><option value="Al Qusaidat">Al Qusaidat</option><option value="Al Qor">Al Qor</option><option value="Al Shuwaib">Al Shuwaib</option><option value="Al Rafaah">Al Rafaah</option><option value="Al Rashidya">Al Rashidya</option><option value="Al Yahar">Al Yahar</option><option value="Asimah">Asimah</option><option value="Dalma">Dalma</option><option value="Dadna">Dadna</option><option value="Digdaga">Digdaga</option><option value="Falaj Al Mualla">Falaj Al Mualla</option><option value="Ghalilah">Ghalilah</option><option value="Ghub">Ghub</option><option value="Habshan">Habshan</option><option value="Huwaylat">Huwaylat</option><option value="Khatt">Khatt</option><option value="Khor Khwair">Khor Khwair</option><option value="Lahbab">Lahbab</option><option value="Marawah">Marawah</option><option value="Masafi">Masafi</option><option value="Masfut">Masfut</option><option value="Mirbah">Mirbah</option><option value="Mleiha">Mleiha</option><option value="Nahil">Nahil</option><option value="Shaam">Shaam</option><option value="Sila">Sila</option><option value="Sir Bani Yas">Sir Bani Yas</option><option value="Sweihan">Sweihan</option><option value="Wadi Shah">Wadi Shah</option><option value="Zubarah">Zubarah</option>');
         
-        // document.getElementById('city').type = 'input';
-
-        
-
-        
+        // document.getElementById('city').type = 'input';        
     }
 	
 });
-
-
 
 
         document.getElementById("vPhone").style.display = "none";

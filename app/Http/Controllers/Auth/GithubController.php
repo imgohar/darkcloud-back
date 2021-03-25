@@ -29,7 +29,8 @@ class GithubController extends Controller
     {
         try {
     
-            $user = Socialite::driver('github')->user();
+            // $user = Socialite::driver('github')->user();
+            $user = Socialite::driver('github')->stateless()->user();
             
             $finduser = User::where('github_id', $user->id)->first();
      
