@@ -70,6 +70,16 @@ Route::get('/auth/github/callback', 'Auth\GithubController@handleGoogleCallback'
 
 
 
+Route::get("/s",function(){
+    $user = Auth::user();
+    echo  $user->balance; // int(0)
+    // $user->deposit(10);
+    // echo $user->balance; // int(10)
+    $user->withdraw(1);
+    echo $user->balance; // int(9)
+});
+
+
 
 
 // Route::get('/', 'PlayerController@index')->name('customer')->middleware('customer');

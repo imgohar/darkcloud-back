@@ -23,7 +23,7 @@ class PagesController extends Controller
             $key = Session::get('is_verified');
             if($key == true){
                 $page_title = 'Dashboard';
-                $page_description = 'Some description for the page';
+                $page_description = 'Welcome to your dashboard';
         
                 return view('pages.dashboard', compact('page_title', 'page_description'));
             }
@@ -53,7 +53,7 @@ class PagesController extends Controller
         }else{
             Session::put('is_verified', true);
             $page_title = 'Dashboard';
-            $page_description = 'Some description for the page';
+            $page_description = 'Welcome to your dashboard';
     
             return view('pages.dashboard', compact('page_title', 'page_description'));
         }
