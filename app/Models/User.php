@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
+use Laravel\Cashier\Billable;
 use Bavix\Wallet\Traits\HasWallet;
 use Bavix\Wallet\Interfaces\Wallet;
+use Bavix\Wallet\Traits\HasWalletFloat;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -13,6 +15,8 @@ class User extends Authenticatable implements MustVerifyEmail,Wallet
 {
     use HasFactory, Notifiable;
     use HasWallet;
+    use Billable;
+    use HasWalletFloat;
 
     /**
      * The attributes that are mass assignable.
@@ -43,7 +47,10 @@ class User extends Authenticatable implements MustVerifyEmail,Wallet
         'b_address_1',
         'b_address_2',
         'id1',
-        'id2'
+        'id2',
+        'card_brand',
+        'card_last_four',
+        'trial_ends_at',
     ];
 
     /**

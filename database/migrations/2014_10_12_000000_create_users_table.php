@@ -41,6 +41,7 @@ class CreateUsersTable extends Migration
             $table->string('id1')->nullable();
             $table->string('id2')->nullable();
             $table->string('role')->default('customer');
+            $table->string('payment_method')->nullable();
             $table->rememberToken();
             $table->timestamps();
 

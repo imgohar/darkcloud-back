@@ -41,14 +41,14 @@
             @endif
             
             @php
-                $user = Auth::user()->balance
+                $user = Auth::user()->balanceFloat
                 
             @endphp
                 <h5 class="text-dark font-weight-bold my-2 mr-5">Total Balance:</h5> <span>{{$user}} $</span>   
 
 
             <div class="dropdown dropdown-inline" data-toggle="tooltip" title="Add more balance" data-placement="left">
-                <a href="#" class="btn btn-icon">
+                <a href="/payment" class="btn btn-icon">
                     {{ Metronic::getSVG("media/svg/icons/Files/File-plus.svg", "svg-icon-success svg-icon-2x") }}
                 </a>
                 

@@ -178,7 +178,7 @@
             </div>
         </div>
     </a>
-    <a href="/reset-password" class="navi-item px-8">
+    <a href="/password-reset" class="navi-item px-8">
         <div class="navi-link">
             <div class="navi-icon mr-2">
                 <i class="flaticon-security text-info"></i>
